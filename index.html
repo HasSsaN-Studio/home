@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskriti Stories - Indian Wedding Photography & Videography</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', serif;
+        }
+
+        body {
+            background-color: #fff5e6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Parallax Sections */
+        .parallax {
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1534161436910-83b1f27b2a39?auto=format&fit=crop&q=80');
+        }
+
+        .portfolio-parallax {
+            background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80');
+            height: 80vh;
+        }
+
+        .parallax h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .parallax p {
+            font-size: 1.5rem;
+            font-family: 'Lora', serif;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background: #d4a017;
+            color: #fff;
+            border-color: #d4a017;
+        }
+
+        /* About Section */
+        #about {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: #fff;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #a52a2a;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            font-family: 'Lora', serif;
+            color: #666;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            padding: 5rem 2rem;
+            background: #fff5e6;
+        }
+
+        #portfolio h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #a52a2a;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #d4a017;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 5rem 2rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #a52a2a;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            font-family: 'Lora', serif;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #d4a017;
+            border-radius: 5px;
+            font-family: 'Lora', serif;
+        }
+
+        .contact-form button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: 2px solid #a52a2a;
+            background: transparent;
+            color: #a52a2a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #a52a2a;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            background: #a52a2a;
+            color: #fff;
+            text-align: center;
+            font-family: 'Lora', serif;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .parallax h1 {
+                font-size: 2.5rem;
+            }
+
+            .parallax p {
+                font-size: 1.2rem;
+            }
+
+            #about h2,
+            #portfolio h2,
+            #contact h2 {
+                font-size: 2rem;
+            }
+
+            /* Disable parallax on mobile for performance */
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="parallax hero">
+        <div class="parallax-content">
+            <h1>Sanskriti Stories</h1>
+            <p>Celebrating Your Love with Timeless Indian Wedding Photography & Videography</p>
+            <a href="#contact" class="cta-button">Book Your Moment</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Our Passion</h2>
+        <p>At Sanskriti Stories, we weave the vibrant traditions and emotions of your Indian wedding into breathtaking photographs and cinematic videos. From the vibrant Haldi to the sacred Vows, we capture every moment with elegance and authenticity.</p>
+    </section>
+
+    <section class="parallax portfolio-parallax">
+        <div class="parallax-content">
+            <h1>Our Craft</h1>
+            <p>Explore our portfolio of vibrant celebrations and heartfelt moments.</p>
+            <a href="#portfolio" class="cta-button">View Portfolio</a>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Indian Wedding Photo 1">
+            <img src="https://images.unsplash.com/photo-1534161436910-83b1f27b2a39?auto=format&fit=crop&q=80" alt="Indian Wedding Photo 2">
+            <img src="https://images.unsplash.com/photo-1562010568-b6a60f3b53a6?auto=format&fit=crop&q=80" alt="Indian Wedding Photo 3">
+            <img src="https://images.unsplash.com/photo-1519227355453-4ea49529d0c5?auto=format&fit=crop&q=80" alt="Indian Wedding Photo 4">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Let’s bring your wedding story to life. Get in touch to discuss your vision!</p>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button onclick="alert('Thank you for your message! We will get back to you soon.')">Send Message</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sanskriti Stories. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
